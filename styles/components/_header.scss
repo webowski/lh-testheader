@@ -1,0 +1,183 @@
+.Header {
+	padding-top: 19px;
+	padding-bottom: 19px;
+	position: relative;
+	z-index: 50;
+	background-color: var(--bg);
+	cursor: default;
+}
+
+.Header__grid {
+	position: relative;
+	display: grid;
+	gap: 1rem;
+	align-items: self-start;
+	grid-template-columns: auto;
+	grid-template-rows: auto 1fr;
+	grid-template-areas:
+		"logo contacts opener"
+		"catalognav catalognav catalognav";
+
+	@include mediaUp(md) {
+		grid-template-areas:
+			"logo banner contacts opener"
+			"catalognav catalognav catalognav catalognav";
+	}
+
+	@include mediaUp(lg) {
+		grid-template-areas:
+			"logo mainnav mainnav mainnav"
+			"logo banner cart contacts"
+			"catalognav catalognav catalognav catalognav";
+	}
+
+	@include mediaUp(xl) {
+		grid-template-areas:
+			"logo mainnav mainnav mainnav mainnav"
+			"logo banner cart items contacts"
+			"catalognav catalognav catalognav catalognav catalognav";
+	}
+}
+
+.Logo              { grid-area: logo }
+.MainNav           { grid-area: mainnav }
+.Header__banner    { grid-area: banner }
+.Header__cart      { grid-area: cart }
+.Header__items     { grid-area: items }
+.Header__contacts  { grid-area: contacts }
+.CatalogNav        { grid-area: catalognav }
+.Header__navOpener { grid-area: opener }
+
+
+.Logo {
+	--width: 80px;
+	--height: 80px;
+	--logoSize: 55px;
+
+	@include linkReset;
+	width: var(--width);
+	margin-bottom: auto;
+	display: block;
+
+	@include mediaUp(sm) {
+		--width: 140px;
+		--height: 70px;
+		--logoSize: 55px;
+	}
+
+	@include mediaUp(lg) {
+		--width: 160px;
+		--height: 85px;
+		--logoSize: 70px;
+	}
+
+	@include mediaUp(xl) {
+		--width: 210px;
+		--height: 110px;
+		--logoSize: 95px;
+	}
+}
+
+.Logo__image {
+	height: var(--height);
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $brand;
+}
+
+.Logo__image svg {
+	display: block;
+	width: var(--logoSize);
+	height: var(--logoSize);
+	fill: var(--intense);
+	cursor: pointer;
+	transition: fill $duration-sm;
+}
+
+.Logo__title {
+	margin-top: 9px;
+	max-width: var(--width);
+	width: 132px;
+	height: 11px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.Header__banner {
+	width: 252px;
+	height: 70px;
+	display: block;
+
+	@include mediaDown(md) {
+		display: none !important;
+	}
+}
+
+.Header__banner img {
+	display: block;
+}
+
+.Header__cart {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 10px;
+
+	@include mediaDown(lg) {
+		display: none !important;
+	}
+}
+
+@include mediaDown(xl) {
+	.Header__items {
+		display: none !important;
+	}
+}
+
+.Header__contacts {
+	margin-left: auto;
+	width: fit-content;
+	font-size: 0.75rem;
+	line-height: 1;
+}
+
+.Header__phone {
+	@include linkReset;
+	display: block;
+	margin-top: 17px;
+	font-size: 20px;
+	line-height: 1;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	white-space: nowrap;
+
+	@include mediaUp(md) {
+		font-size: 25px;
+	}
+}
+
+.Header__city {
+	margin-top: 16px;
+	padding-top: 4px;
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid var(--border);
+}
+
+.NavOpener {
+	@include buttonReset;
+	margin-left: auto;
+
+	@include mediaUp(lg) {
+		display: none !important;
+	}
+}
+
+.NavOpener .Icon {
+	width: 2rem;
+	height: 1.5rem;
+}

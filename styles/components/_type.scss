@@ -1,0 +1,15 @@
+.LinkPseudo {
+	@include linkReset;
+	display: flex;
+	align-items: center;
+}
+
+.LinkPseudo .Icon {
+	margin-right: 4px;
+}
+
+.LinkPseudo__text {
+	text-decoration: underline;
+	text-decoration-style: dotted;
+	text-underline-position: under;
+}

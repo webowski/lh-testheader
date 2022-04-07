@@ -1,0 +1,30 @@
+body {
+	background-color: var(--bg);
+	overflow: hidden;
+}
+
+.Wrap {
+	overflow: hidden;
+	position: relative;
+}
+
+body .Wrap:before {
+	@include pseudoBlock(100%);
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.4);
+	z-index: 59;
+	position: fixed;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity .3s ease, visibility 0s linear .3s;
+}
+
+body.G-navOverlay {
+
+	.Wrap:before {
+		opacity: 1;
+		visibility: visible;
+		transition: opacity .3s ease-out;
+	}
+}

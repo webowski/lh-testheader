@@ -1,0 +1,43 @@
+// Custom properties
+// ---------------------
+:root {
+	// Text
+	--fontMain:             #{$fontMain};
+	--fontSize:             #{$fontSize};
+	--lineHeight:           #{$lineHeight};
+
+	// Color
+	--brand:                #{$brand};
+	--voice:                #{$voice};
+	// --success:              #{$success};
+	// --successLight:         #{$successLight};
+	// --danger:               #{$danger};
+	--intense:              #{$intense};
+	--major:                #{$major};
+	// --minor:                #{$minor};
+	// --muted:                #{$muted};
+	// --mutedLight:           #{$mutedLight};
+	// --mutedLightest:        #{$mutedLightest};
+	// --disabled:             #{$disabled};
+	// --inverse:              #{$inverse};
+	// --bg:                   #{$bg};
+	// --bgAlter:              #{$bgAlter};
+	--border:               #{$mutedLight};
+
+	// Dimensions
+	--containerMax:         1210px;
+	--sidePadding:          16px;
+
+	--gap:                  #{$gap};
+
+	@media (min-width: $sm) {
+		--sidePadding:          20px;
+	}
+
+	@media (min-width: $md) {
+		--sidePadding:          20px;
+	}
+
+	// Shape
+	--radius:                 #{$radius};
+}

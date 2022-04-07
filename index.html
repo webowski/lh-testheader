@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>LH Test Header</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="//fonts.googleapis.com/css2?family=Roboto:wght@400;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./styles/styles.min.css">
+</head>
+<body>
+
+	<div class="Wrap">
+
+		<header class="Header">
+			<div class="Header__grid container">
+
+				<a href="" class="Logo">
+
+					<div class="Logo__image">
+						<svg aria-hidden="true">
+							<use href="#tools"></use>
+						</svg>
+					</div>
+
+					<svg class="Logo__title" aria-hidden="true">
+						<use href="#brand-title"></use>
+					</svg>
+
+				</a>
+
+				<nav class="MainNav">
+					<ul>
+						<li><a href="">Каталог инструментов</a></li>
+						<li><a href="">Все для сада</a></li>
+						<li><a href="">Ручной интрумент</a></li>
+						<li><a href="">Электрика</a></li>
+						<li><a href="">Доставка</a></li>
+						<li><a href="">Оплата</a></li>
+						<li><a href="">О нас</a></li>
+					</ul>
+					<div class="MainNav__auth">
+						<a href="">Вход</a>
+						<div class="MainNav__authSep"></div>
+						<a href="">Регистрация</a>
+					</div>
+				</nav>
+
+				<a href="" class="Header__banner">
+					<img src="./images/banner-placeholder.jpg" alt="">
+				</a>
+
+				<div class="Header__cart">
+
+					<a href="" class="Count -lg">
+						<div class="Count__icon">
+							<svg class="Icon" aria-hidden="true">
+								<use href="#cart"></use>
+							</svg>
+						</div>
+						<span class="Count__text">3 шт. / 17 250 р.</span>
+					</a>
+
+					<a href="" class="Count">
+						<div class="Count__icon">
+							<svg class="Icon rect-0875" aria-hidden="true">
+								<use href="#star"></use>
+							</svg>
+						</div>
+						<span class="Count__text">Избранное (7)</span>
+					</a>
+
+					<a href="" class="Count">
+						<div class="Count__icon">
+							<svg class="Icon rect-1125" aria-hidden="true">
+								<use href="#balance"></use>
+							</svg>
+						</div>
+						<span class="Count__text">К сравнению (5)</span>
+					</a>
+
+				</div>
+
+				<div class="CartItems Header__items">
+
+					<a href="" class="CartItem">
+						<img src="./media/item-1.png" alt="">
+					</a>
+
+					<a href="" class="CartItem">
+						<img src="./media/item-2.png" alt="">
+					</a>
+
+					<a href="" class="CartItem">
+						<img src="./media/item-3.png" alt="">
+					</a>
+
+				</div>
+
+				<div class="Header__contacts">
+
+					<div class="d-flex justify-between gap-025 nowrap flex-wrap">
+						<div class="fw-700">Время работы:</div>
+						<div>10:00 — 19:00</div>
+					</div>
+
+					<a href="tel:+74957212525" class="Header__phone">8 495 721-25-25</a>
+
+					<div class="Header__city">
+
+						<div class="">Москва</div>
+
+						<a href="" class="LinkPseudo">
+							<svg class="Icon -arrow" aria-hidden="true">
+								<use href="#arrow"></use>
+							</svg>
+							<span class="LinkPseudo__text">сменить</span>
+						</a>
+
+					</div>
+
+				</div>
+
+				<button class="NavOpener">
+					<svg class="Icon" aria-hidden="true">
+						<use href="#hamburger"></use>
+					</svg>
+				</button>
+
+				<nav class="CatalogNav">
+					<a class="CatalogNav__button -search">
+						<svg class="Icon" aria-hidden="true">
+							<use href="#search"></use>
+						</svg>
+					</a>
+
+					<ul class="CatalogNav__list  d-flex lg:d-none">
+						<li class="CatalogNav__item -dropdown">
+							<a href="" class="d-flex align-center">
+								Каталог
+								<svg class="Icon -arrow rotate-90" aria-hidden="true">
+									<use href="#arrow"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+
+					<ul class="CatalogNav__list  d-none lg:d-flex">
+						<li class="CatalogNav__item -current"><a href="">Перфораторы</a></li>
+						<li class="CatalogNav__item"><a href="">Дрели</a></li>
+						<li class="CatalogNav__item"><a href="">Шлифмашины</a></li>
+						<li class="CatalogNav__item"><a href="">Пистолеты</a></li>
+						<li class="CatalogNav__item"><a href="">Электропилы</a></li>
+						<li class="CatalogNav__item"><a href="">Наборы инструментов</a></li>
+						<li class="CatalogNav__item"><a href="">Акксесуары</a></li>
+					</ul>
+
+					<a class="CatalogNav__button">Распродажа</a>
+				</nav>
+
+			</div>
+		</header>
+
+		<div class="NavMobile">
+			<ul>
+				<li><a href="">Каталог инструментов</a></li>
+				<li><a href="">Все для сада</a></li>
+				<li><a href="">Ручной интрумент</a></li>
+				<li><a href="">Электрика</a></li>
+				<li><a href="">Доставка</a></li>
+				<li><a href="">Оплата</a></li>
+				<li><a href="">О нас</a></li>
+			</ul>
+			<div class="NavMobile__auth">
+				<a href="">Вход</a>
+				<div class="NavMobile__authSep"></div>
+				<a href="">Регистрация</a>
+			</div>
+		</div>
+
+	</div>
+
+<script src="./scripts/bundle.min.js"></script>
+</body>
+</html>

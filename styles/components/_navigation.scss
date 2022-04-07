@@ -1,0 +1,224 @@
+.MainNav {
+	margin-bottom: 3px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid var(--border);
+	font-size: .75rem;
+	line-height: 1;
+	display: flex;
+	align-items: flex-start;
+
+	@include mediaDown(lg) {
+		display: none !important;
+	}
+}
+
+.MainNav ul {
+	@include listReset(true);
+	display: flex;
+	gap: 1.4rem;
+}
+
+.MainNav a {
+	@include linkReset;
+}
+
+.MainNav a:hover {
+	text-decoration: underline !important;
+}
+
+.MainNav__auth {
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+	font-size: .75rem;
+}
+
+.MainNav__auth a {
+	@include linkReset;
+}
+
+.MainNav__authSep {
+	margin-left: 14px;
+	margin-right: 14px;
+	height: 10px;
+	width: 1px;
+	background-color: $black;
+}
+
+
+.CatalogNav {
+	--radius: 9px;
+	--bg: #252525;
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--major);
+	border-radius: 11px;
+	box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+
+	@include mediaUp(sm) {
+		margin-top: 0.825rem;
+	}
+}
+
+.CatalogNav__button,
+.CatalogNav__list a {
+	@include linkReset;
+	padding: 10px 12px;
+	display: block;
+	margin: 0;
+	cursor: pointer;
+	color: $white;
+	font-size: .875rem;
+	line-height: 1;
+	font-weight: 600;
+	align-items: center;
+}
+
+.CatalogNav__list {
+	@include listReset;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	flex-grow: 1;
+	background-color: var(--bg);
+
+	@include mediaDown(md) {
+		display: none !important;
+	}
+}
+
+.CatalogNav__list li {
+	height: 100%;
+}
+
+.CatalogNav__list a {
+	white-space: nowrap;
+	min-height: 100%;
+
+	@include mediaUp(xl) {
+		padding-left: 19px;
+		padding-right: 19px;
+	}
+}
+
+.CatalogNav__list a:hover {
+	color: var(--intense);
+	background-color: var(--brand);
+}
+
+.CatalogNav__item.-current a {
+	color: var(--intense);
+	background-color: var(--brand);
+}
+
+.CatalogNav__item.-dropdown a {
+	display: flex;
+}
+
+.CatalogNav__item.-dropdown .Icon {
+	margin-left: 0.3rem;
+	margin-top: 1px;
+}
+
+.CatalogNav__button {
+	padding: 10px 15px 8px;
+	display: flex;
+	text-transform: uppercase;
+	background-color: var(--brand);
+	color: $black;
+}
+
+.CatalogNav__button:last-child {
+	border-top-right-radius: var(--radius);
+	border-bottom-right-radius: var(--radius);
+}
+
+.CatalogNav__button:first-child {
+	border-top-left-radius: var(--radius);
+	border-bottom-left-radius: var(--radius);
+}
+
+.CatalogNav__button.-search {
+	padding: 5px 8px 3px;
+}
+
+.CatalogNav__button.-search .Icon {
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+.NavMobile {
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100vh;
+	width: 100vw;
+	max-width: calc(280px);
+	padding-top: 2rem;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color: $white;
+	position: fixed;
+	right: 0;
+	top: 0;
+	pointer-events: auto;
+	opacity: 0;
+	visibility: hidden;
+	transition:
+		opacity $duration-lg,
+		transform $duration-lg,
+		visibility 0s linear $duration-lg;
+	will-change: opacity, transform;
+	transform: translateX(100%);
+	z-index: 100;
+	font-size: .9375rem;
+
+
+	@include mediaUp(lg) {
+		display: none;
+	}
+}
+
+.NavMobile.is-open {
+	visibility: visible;
+	opacity: 1;
+	transition:
+		opacity $duration-lg,
+		transform $duration-lg;
+	transform: translateX(0);
+}
+
+.NavMobile ul {
+	@include listReset(true);
+}
+
+.NavMobile ul li + li {
+	margin-top: 0.25rem;
+}
+
+.NavMobile ul a {
+	@include linkReset;
+	font-weight: 600;
+}
+
+.NavMobile__auth {
+	margin-top: 1.5rem;
+	display: flex;
+	align-items: center;
+	font-size: 0.825rem;
+}
+
+.NavMobile__auth a {
+	@include linkReset;
+	font-weight: 400;
+}
+
+.NavMobile__authSep {
+	margin-left: 14px;
+	margin-right: 14px;
+	height: 10px;
+	width: 1px;
+	background-color: $black;
+}

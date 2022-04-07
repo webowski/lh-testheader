@@ -1,0 +1,18 @@
+.CartItems {
+	display: flex;
+	margin-bottom: auto;
+	gap: 15px;
+}
+
+.CartItem {
+	display: block;
+	border: 1px solid var(--border);
+}
+
+.CartItem img {
+	display: block;
+}
+
+.CartItem:hover {
+	border-color: var(--brand);
+}
